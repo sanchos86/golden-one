@@ -1,0 +1,118 @@
+{
+    "servicesItems": [
+        {
+            "icon": "basket", 
+            "heading": "E-Commerse", 
+            "text": "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt."
+        }, 
+        {
+            "icon": "notebook", 
+            "heading": "Responsive Web", 
+            "text": "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt."
+        }, 
+        {
+            "icon": "locked", 
+            "heading": "Web Security", 
+            "text": "Proin iaculis purus consequat sem cure digni services-item. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt."
+        }
+    ],
+    "portfolioItems": [
+        {
+            "animationType": "fade-down-right",
+            "link": "http://fion.ru",
+            "heading": "Ebony & Ivory",
+            "type": "Branding"
+        },
+        {
+            "animationType": "fade-down",
+            "link": "http://fion.ru",
+            "heading": "Smart Stationary",
+            "type": "Print Design"
+        },
+        {
+            "animationType": "fade-down-left",
+            "link": "http://fion.ru",
+            "heading": "Clever Poster",
+            "type": "Print Design"
+        },
+        {
+            "animationType": "fade-up-right",
+            "link": "http://fion.ru",
+            "heading": "Vinyl Record",
+            "type": "Product Mock-Up"
+        },
+        {
+            "animationType": "fade-up",
+            "link": "http://fion.ru",
+            "heading": "Treehouse Template",
+            "type": "Web-Design"
+        },
+        {
+            "animationType": "fade-up-left",
+            "link": "http://fion.ru",
+            "heading": "Burned Logo",
+            "type": "Branding"
+        }
+    ],
+    "aboutItems": [
+        {
+            "animationType": "fade-right",
+            "heading": "JULY 2010<br>Our Humble Beginnings",
+            "text": "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit."
+        },
+        {
+            "animationType": "fade-left",
+            "heading": "JANUARY 2011<br>Facing Startup Battles",
+            "text": "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit."
+        },
+        {
+            "animationType": "fade-right",
+            "heading": "DECEMBER 2012<br>Enter The Dark Days",
+            "text": "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit."
+        },
+        {
+            "animationType": "fade-left",
+            "heading": "FEBRUARY 2014<br>Our Triumph",
+            "text": "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit."
+        },
+        {
+            "animationType": "",
+            "heading": "",
+            "text": ""
+        }
+    ],
+    "teamItems": [
+        {
+            "name": "Kimberly Thompson",
+            "post": "Marketer",
+            "socials": {
+                "twitter": "https://twitter.com/",
+                "facebook": "https://www.facebook.com/",
+                "pinterest-p": "https://ru.pinterest.com/"
+            }
+        },
+        {
+            "name": "Rico Massimo",
+            "post": "Coder",
+            "socials": {
+                "twitter": "https://twitter.com/",
+                "facebook": "https://www.facebook.com/",
+                "google": "https://plus.google.com"
+            }
+        },
+        {
+            "name": "Uku Mason",
+            "post": "Graphic Designer",
+            "socials": {
+                "facebook": "https://www.facebook.com/",
+                "pinterest-p": "https://ru.pinterest.com/"
+            }
+        }
+    ],
+    "companySocials": {
+        "twitter": "https://twitter.com/",
+        "facebook": "https://www.facebook.com/",
+        "pinterest-p": "https://ru.pinterest.com/",
+        "google": "https://plus.google.com"
+    }
+}

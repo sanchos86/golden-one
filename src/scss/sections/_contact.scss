@@ -1,0 +1,67 @@
+.contact {
+    @include section-padding();
+    min-height: 675px;
+    background-image: url(../images/map.png);
+    background-size: cover;
+    background-position: center;
+    &__heading {
+        @include heading($tt: uppercase, $cr: $white);
+    }
+    &__description {
+        @include description();
+        margin-bottom: 70px;
+    }
+}
+.form {
+    &__container {
+        @include container($mw: 960px, $pd: 0);
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    &__group {
+        width: calc(50% - 20px);
+        margin: 0 10px;
+    }
+    &__block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    &__input,
+    &__textarea {
+        @include pl-fade-out();
+        width: 100%;
+        border-radius: 2px;
+        color: $gray;
+        border: 0;    
+        font: {
+            family: $mBold, sans-serif;
+            size: 14px;
+        }
+    }
+    &__input {
+        height: 50px;
+        padding: 0 20px;
+    }
+    &__textarea {
+        height: 210px;
+        padding: 20px;
+        overflow: auto;
+    }
+    &__button {
+        @include yellow-button();
+    }
+}
+
+@media (max-width: 850px) {
+    .contact {
+        min-height: 0;
+    }
+}
+@media (max-width: 700px) {
+    .form {
+        &__group {
+            width: calc(100% - 20px);
+        }
+    }
+}

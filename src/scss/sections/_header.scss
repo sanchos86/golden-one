@@ -1,0 +1,40 @@
+.header {
+    min-height: 699px;
+    padding: 270px 20px 150px;
+    background-image: url(../images/header.png);
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    &__heading {
+        font: {
+            family: $dItalic;
+            size: 40px;
+        }
+    }
+    &__text {
+        margin-top: 43px;
+        text-transform: uppercase;
+        font: {
+            family: $mBold;
+            size: 75px;
+        }
+    }
+    &__button {
+        margin-top: 55px;
+        @include yellow-button();
+    }
+}
+
+@media (max-width: 699px) {
+    .header {
+        min-height: 0;
+        padding: 170px 10px 80px;
+        &__text {
+            margin-top: 30px;
+            font-size: 45px;
+        }
+        &__button {
+            margin-top: 40px;
+        }
+    }
+}

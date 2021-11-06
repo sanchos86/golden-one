@@ -1,0 +1,41 @@
+.footer {
+    &__container {
+        @include container();
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 90px;
+    }
+    &__socials {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.company-socials {
+    &__item {
+        display: inline-block;
+        @include social-link($bck-c: $dark, $clr: $white)
+    }
+}
+
+@media (max-width: 850px) {
+    .footer {
+        &__container {
+            flex-direction: column;
+            height: auto;
+        }
+        &__text {
+            margin: 10px 0;
+        }
+        &__socials {
+            order: -1;
+            position: static;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            margin: 10px 0 0;
+        }
+    }
+}

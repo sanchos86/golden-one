@@ -1,0 +1,37 @@
+.parthners {
+    height: 162px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__pair {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image {
+        margin: 0 20px;
+        max-width: 140px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .parthners {
+        height: auto;
+        flex-direction: column;
+        &__image {
+            padding: 15px 0;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .parthners {
+        &__image {
+            max-width: 120px;
+            margin: 0 8px;
+        }
+    }
+}

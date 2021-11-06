@@ -1,0 +1,47 @@
+.services {
+    @include section-padding();
+    &__container {
+        display: flex;
+        @include container($pd: 0);
+    }
+    &__heading {
+        @include heading($tt: uppercase);
+    }
+    &__description {
+        @include description();
+    }
+}
+.services-item {
+    width: calc(100% / 3 - 40px);
+    margin: 80px 20px 0;
+    &__icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto;
+        border: 3px solid $yellow;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__heading {
+        margin-top: 25px;
+        @include heading($fz: 18px);
+    }
+    &__text {
+        margin-top: 20px;
+        line-height: normal;
+    }
+}
+
+@media (max-width: 700px) {
+    .services {
+        &__container {
+            flex-wrap: wrap;
+        }
+    }
+    .services-item {
+        margin-top: 30px;
+        width: calc(100% - 40px);
+    }
+}

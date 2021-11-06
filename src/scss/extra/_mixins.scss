@@ -1,0 +1,94 @@
+@mixin font-face($fontFamily, $path, $fontWeight: normal, $fontStyle: normal) {
+    @font-face {
+        font-family: $fontFamily;
+        src: url('#{$path}.woff2') format('woff2'),
+            url('#{$path}.woff') format('woff');
+
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+        font-display: swap;
+    }
+}
+
+@mixin section-padding() {
+    padding: 120px 0;
+    @media (max-width: 850px) {
+        padding: 60px 0;
+    }
+}
+
+@mixin container($mw: 980px, $pd: 0 20px) {
+    margin: 0 auto;
+    max-width: $mw;
+    padding: $pd;
+}
+
+@mixin yellow-button{
+    background-color: $yellow;
+    color: $white;
+    font-size: 18px;
+    font-family: $mBold;
+    padding: 22px 50px;
+    text-transform: uppercase;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: .4s all ease-in-out;
+    cursor: pointer;
+    &:hover{
+        background: darken($yellow, 20%);
+        transform: scale(1.03);
+    }
+    @media (max-width: 699px) {
+        padding: 17px 20px;
+    }
+}
+
+@mixin heading($ff: $mBold, $fz: 40px, $cr: $dark, $tt: normal) {
+    font: {
+        family: $ff;
+        size: $fz;
+    }
+    color: $cr;
+    text-transform: $tt;
+}
+
+@mixin description() {
+    margin-top: 22px;
+    padding: 0 5px;
+    font: {
+        family: $dItalic;
+        size: 16px;
+    }
+}
+
+@mixin social-link($bck-c: transparent, $clr: $dark, $bd: 2px solid $dark) {
+    background-color: $bck-c;
+    color: $clr;
+    border: $bd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}
+
+@mixin pl-fade-out($duration: 200ms, $tt: uppercase) {
+  @include placeholder {
+    opacity: 1;
+    transition: opacity $duration ease-in-out;
+    text-transform: $tt;
+  }
+  &:focus {
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+}

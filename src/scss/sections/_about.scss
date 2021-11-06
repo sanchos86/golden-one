@@ -1,0 +1,130 @@
+.about {
+    @include section-padding();
+    &__heading {
+        @include heading($tt: uppercase);
+    }
+    &__description {
+        @include description();
+        margin-bottom: 80px;
+    }
+    &__container {
+        @include container();
+    }
+}
+.about-item {
+    display: flex;
+    width: 100%;
+    &_even {
+        .about-item__info {
+            text-align: right;
+        }
+    }
+    &_odd {
+        justify-content: flex-end;
+        .about-item__info {
+            text-align: left;
+        }
+    }
+    &__info {
+        width: calc((100% - 262px) / 2);
+    }
+    &__heading {
+        @include heading($fz: 18px);
+        line-height: normal;
+        margin-bottom: 15px;
+    }
+    &__text {
+        line-height: normal;
+    }
+    &__image-wrapper {
+        margin: 0 40px;
+        &::after {
+            display: block;
+            content: '';
+            width: 2px;
+            height: 90px;
+            margin: 0 auto;
+            background-color: #f1f1f1;
+        }
+    }
+    &__image,
+    &__poster-wrapper {
+        display: block;
+        width: 182px;
+        height: 182px;
+        border: 7px solid #f1f1f1;
+        border-radius: 50%;
+    }
+    &__poster-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 40px;
+        background-color: $yellow;
+        color: $white;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px #fdb91a;
+        font: {
+            family: $mBold;
+            size: 18px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .about-item {
+        &_even {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            .about-item__info {
+                text-align: left;
+            }
+        }
+        &_odd {
+            justify-content: flex-start;
+        }
+        &__info {
+            width: calc(100% - 262px);
+        }
+        &__image-wrapper,
+        &__poster-wrapper {
+            margin: 0 20px 0 0;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .about {
+        &__description {
+            margin-bottom: 40px;
+        }
+    }
+    .about-item {
+        flex-direction: column;
+        align-items: center;
+        &_even {
+            flex-direction: column-reverse;
+            .about-item__info {
+                text-align: center;
+            }
+        }
+        &_odd {
+            .about-item__info {
+                text-align: center;
+            }
+        }
+        &__info {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__image-wrapper {
+            &::after {
+                content: none;
+            }
+        }
+        &__image-wrapper,
+        &__poster-wrapper {
+            margin: 25px 0 0 0;
+        }
+    }
+}

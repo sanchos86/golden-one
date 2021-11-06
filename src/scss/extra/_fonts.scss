@@ -1,0 +1,6 @@
+@include font-face('Icomoon', '../fonts/Icomoon/icomoon');
+@include font-face('DroidSerifItalic', '../fonts/DroidSerifItalic/DroidSerif-Italic', $fontStyle: italic);
+@include font-face('MontserratBold', '../fonts/MontserratBold/Montserrat-Bold', $fontWeight: bold);
+@include font-face('MontserratRegular', '../fonts/MontserratRegular/Montserrat-Regular');
+@include font-face('RobotoSlabRegular', '../fonts/RobotoSlabRegular/RobotoSlab-Regular');
+@include font-face('WisdomScript', '../fonts/WisdomScript/WisdomScript');

@@ -1,0 +1,157 @@
+include extra/mixins.pug
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='x-ua-compatible' content='ie=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='Sed do eiusmod tempor incididunt ut labore et dolore')
+        title GoldenOne
+    body
+        div(class='to-top')
+            i(class='icon-angle-double-up')
+        div(class='sticky-nav')
+            div(class='container')
+                a(class='logo' href='#home') Golden
+                nav(class='main-nav')
+                    ul(class='main-nav__list')
+                        each val in ['home', 'services', 'portfolio', 'about', 'contact']
+                            li(class='main-nav__item')
+                                a(class='main-nav__link' href=`#${val}`)= val
+                div.menu-trigger
+                    i.icon-bars
+        header(class='header' id='home')
+            h1(class='header__heading') Welcome To Our Studio!
+            p(class='header__text') It's nice to meet you
+            button(class='header__button') tell me more
+        section(class='services' id='services')
+            h2(class='services__heading') services
+            p(class='services__description') Proin iaculis purus consequat sem cure.
+            div(class='services__container')
+                each val in servicesItems
+                    div(class='services-item' data-aos='zoom-in')
+                        div(class='services-item__icon')
+                            i(class=`i-${val.icon}`)
+                        h3(class='services-item__heading')= val.heading
+                        p(class='services-item__text')= val.text
+        section(class='portfolio' id='portfolio')
+            h2(class='portfolio__heading') portfolio
+            p(class='portfolio__description') Proin iaculis purus consequat sem cure.
+            div(class='portfolio__container')
+                each val, index in portfolioItems
+                    div(class='portfolio-item' data-aos=`${val.animationType}`)
+                        a(
+                            class='portfolio-item__preview'
+                            href=`images/portfolio${index + 1}.png`
+                            title=`Portfolio_Image_${index + 1}`
+                            data-lightbox="Portfolio"
+                        )
+                            div(class='portfolio-item__overlay')
+                                i(class='icon-plus')
+                            img(
+                                class='portfolio-item__image'
+                                alt=`${val.heading}`
+                                src=`images/portfolio${index + 1}.png`
+                            )
+                        div(class='portfolio-item__info')
+                            h3(class='portfolio-item__heading')= val.heading
+                            p(class='portfolio-item__type')= val.type
+        section(class='about' id='about')
+            h2(class='about__heading') about us
+            p(class='about__description') Proin iaculis purus consequat sem cure.
+            div(class='about__container')
+                each val, index in aboutItems
+                    case index % 2
+                        when 0
+                            if index !== aboutItems.length - 1
+                                div(class='about-item about-item_even')
+                                    div(class='about-item__info' data-aos=`${val.animationType}`)
+                                        h3(class='about-item__heading') !{val.heading}
+                                        p(class='about-item__text')= val.text
+                                    div(class='about-item__image-wrapper')
+                                        img(
+                                            src=`images/about${index + 1}.png`
+                                            alt=`About_Image_${index + 1}`
+                                            class='about-item__image'
+                                        )
+                            else
+                                div(class='about-item about-item_even about-item_last')
+                                    div(class='about-item__info')
+                                    div(class='about-item__poster-wrapper')
+                                        div(class='about-item__poster') our<br>story<br>continues<br>...
+                        when 1
+                            div(class='about-item about-item_odd')
+                                div(class='about-item__image-wrapper')
+                                    img(
+                                        src=`images/about${index + 1}.png`
+                                        alt=`About_Image_${index + 1}`
+                                        class='about-item__image'
+                                    )
+                                div(class='about-item__info' data-aos=`${val.animationType}`)
+                                    h3(class='about-item__heading') !{val.heading}
+                                    p(class='about-item__text')= val.text
+        section(class='team')
+            h2(class='team__heading') our amazing team
+            p(class='team__description') Proin iaculis purus consequat sem cure.
+            div(class='team__container')
+                each val, index in teamItems
+                    div(class='team-item' data-aos='zoom-in')
+                        img(
+                            src=`images/team${index + 1}.png`
+                            alt=`${val.name}`
+                            class='team-item__image'
+                        )
+                        p(class='team-item__name')= val.name
+                        p(class='team-item__post')= val.post
+                        div(class='team-item__socials')
+                            each v, i in val.socials
+                                a(
+                                    class=`team-item__social-link social-link_${i}`
+                                    aria-label=`${val.name} ${i}`
+                                    href=`${v}`
+                                )
+                                    i(class=`icon-${i}`)
+            p(class='team__comment') Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt proin iaculis.
+        div(class='parthners')
+            div(class='parthners__pair' data-aos='fade-right')
+                div(class='parthners__image')
+                    img(src='images/parthner1.png' alt='Envato')
+                div(class='parthners__image')
+                    img(src='images/parthner2.png' alt='WordPress')
+            div(class='parthners__pair' data-aos='fade-left')
+                div(class='parthners__image')
+                    img(src='images/parthner3.png' alt='Tuts+')
+                div(class='parthners__image')
+                    img(src='images/parthner4.png' alt='Microlancer')
+        section(class='contact' id='contact')
+            h2(class='contact__heading') contact us
+            p(class='contact__description') Proin iaculis purus consequat sem cure.
+            form(class='form')
+                div(class='form__container')
+                    div(class='form__group' data-aos='fade-right')
+                        each val, index in [{type: 'text', name: 'name'}, {type: 'email', name: 'email'}, {type: 'text', name: 'subject'}]
+                            +input(val.type, val.name)
+                    div(class='form__group' data-aos='fade-left')
+                        div(class='form__block')
+                            textarea(
+                                class='form__textarea'
+                                name='message'
+                                placeholder='your message *'
+                                required
+                            )
+                button(
+                    type='submit'
+                    class='form__button'
+                    id='submitButton'
+                ) send message
+        footer(class='footer')
+            div(class='footer__container')
+                p(class='footer__text') © Copyright 2014 FreebiesXpress.com
+                div(class='footer__socials company-socials')
+                    each val, index in companySocials
+                        a(
+                            class=`company-socials__item social-link_${index}`
+                            aria-label=`${index}`
+                            href=`${val}`
+                        )
+                            i(class=`icon-${index}`)
